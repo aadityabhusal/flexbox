@@ -47,7 +47,7 @@ a{
 #slide-list{
 	position: absolute;
 	left: 0px;
-	transition: 1s;
+	transition: 0.3s;
 }
 .slide{
 	width:250px;
