@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 	$("#left-slide").click(function(){
 		var right = $("#slide-list").offset().left;
-		if(right<="-249"){
+		if(right<="-65"){
 			$("#slide-list").css('left',(right+270));
 		}
 	});	
