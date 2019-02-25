@@ -14,10 +14,11 @@ header{
 	line-height: 80px;
 }
 nav{
-	background: #f1c40f;
-	height: 60px;
-	line-height: 60px;
+	/*background: #f1c40f;*/
+	height: 50px;
+	line-height: 50px;
 	text-align: center;
+	margin: 10px 0;
 }
 ul,#slide-list{
 	list-style: none;
@@ -31,14 +32,53 @@ ul,#slide-list{
 	cursor: pointer;
 }
 nav li:hover{
-	background: #f39c12;
+	/*background: #f39c12;*/
 }
 a{
 	display: block;
+	position: relative;
 	text-decoration: none;
 	color: #2c3e50;
 	outline: 0;
+	transition: 0.3s ease-out
 }
+nav li a:hover{
+	color: #fff;
+}
+nav li a:before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transition: 0.3s ease-out;
+	border-top: 2px solid #2c3e50;
+	border-bottom: 2px solid #2c3e50;
+	transform: scaleY(1.4);
+	opacity: 0;
+}
+nav li a:hover:before{
+	transform: scaleY(1);
+	opacity: 1;
+}
+nav li a:after{
+	content: '';
+	position: absolute;
+	height: 80%;
+	width: 100%;
+	top: 8px;
+	left: 0;
+	transition: 0.3s ease-out;
+	background: #2c3e50;
+	transform: scale(0);
+	opacity: 0;
+	z-index: -1;
+}
+nav li a:hover:after{
+	transform: scale(1);
+	opacity: 1;
+}	
 #slider{
 	height: 200px;
 	position: relative;
